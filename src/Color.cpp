@@ -15,9 +15,9 @@ uint8_t Color::get_blue() const { return blue; }
 
 Color Color::operator*(double k) const {
     return {
-        static_cast<uint8_t>(std::clamp<uint16_t>(this->red * k, 0, this->get_channel_max())),
-        static_cast<uint8_t>(std::clamp<uint16_t>(this->green * k, 0, this->get_channel_max())),
-        static_cast<uint8_t>(std::clamp<uint16_t>(this->blue * k, 0, this->get_channel_max()))
+        static_cast<uint8_t>(std::clamp<double>(this->red * k, 0, this->get_channel_max())),
+        static_cast<uint8_t>(std::clamp<double>(this->green * k, 0, this->get_channel_max())),
+        static_cast<uint8_t>(std::clamp<double>(this->blue * k, 0, this->get_channel_max()))
     };
 }
 
