@@ -3,16 +3,16 @@
 #include "Canvas.hpp"
 
 
-Canvas::Canvas(uint32_t width, uint32_t height) :
+Canvas::Canvas(int32_t width, int32_t height) :
     width(width),
     height(height),
-    x_offset(static_cast<int32_t>(width / 2)),
-    y_offset(static_cast<int32_t>(height / 2)),
+    x_offset(width / 2),
+    y_offset(height / 2),
     window(
         SDL_CreateWindow(
             "CGFromScratch",
             SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-            static_cast<int>(width), static_cast<int>(height),
+            width, height,
             0
         ),
         SDL_DestroyWindow
@@ -48,9 +48,9 @@ void Canvas::display() {
     SDL_RenderPresent(this->renderer.get());
 }
 
-uint32_t Canvas::get_width() const { return this->width; }
+int32_t Canvas::get_width() const { return this->width; }
 
-uint32_t Canvas::get_height() const { return this->height; }
+int32_t Canvas::get_height() const { return this->height; }
 
 int32_t Canvas::get_left() const { return -this->x_offset; }
 
