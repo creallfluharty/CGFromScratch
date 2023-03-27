@@ -11,10 +11,13 @@ public:
     static uint8_t get_channel_max();
 
     [[nodiscard]] uint8_t get_red() const;
+
     [[nodiscard]] uint8_t get_green() const;
+
     [[nodiscard]] uint8_t get_blue() const;
 
     Color operator*(double k) const;
+
     Color operator+(Color other) const;
 
 private:

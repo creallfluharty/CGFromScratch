@@ -12,15 +12,21 @@ public:
     Canvas(int32_t width, int32_t height);
 
     void put_pixel(int32_t x, int32_t y, Color color);
+
     void clear(Color color);
+
     void display();
 
     [[nodiscard]] int32_t get_width() const;
+
     [[nodiscard]] int32_t get_height() const;
 
     [[nodiscard]] int32_t get_left() const;
+
     [[nodiscard]] int32_t get_right() const;
+
     [[nodiscard]] int32_t get_bottom() const;
+
     [[nodiscard]] int32_t get_top() const;
 
 private:

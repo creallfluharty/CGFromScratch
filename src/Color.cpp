@@ -10,7 +10,9 @@ uint8_t Color::get_channel_max() {
 }
 
 uint8_t Color::get_red() const { return red; }
+
 uint8_t Color::get_green() const { return green; }
+
 uint8_t Color::get_blue() const { return blue; }
 
 Color Color::operator*(double k) const {
