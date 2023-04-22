@@ -32,5 +32,5 @@ Color Color::operator+(Color other) const {
 }
 
 std::ostream& operator<<(std::ostream& out, const Color& color) {
-    return out << "Color(" << +color.get_red() << ", " << +color.get_green() << ", " << +color.get_blue() << ")";
+    return out << "Color(" << +color.red << ", " << +color.green << ", " << +color.blue << ")";
 }

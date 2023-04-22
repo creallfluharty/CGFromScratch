@@ -4,7 +4,7 @@ project(CGFromScratch VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(CGFromScratch src/main.cpp src/Canvas.cpp src/Color.cpp)
+add_executable(CGFromScratch src/main.cpp src/Canvas.cpp src/Color.cpp src/Viewport.cpp src/Vec3.cpp src/Sphere.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

@@ -20,10 +20,11 @@ public:
 
     Color operator+(Color other) const;
 
+    friend std::ostream& operator<<(std::ostream& out, const Color& color);
+
 private:
     uint8_t red, green, blue;
 };
 
-std::ostream& operator<<(std::ostream& out, const Color& color);
 
 #endif
