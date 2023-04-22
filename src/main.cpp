@@ -28,10 +28,10 @@ int main(int argc, char** argv) {
     auto canvas = Canvas(256, 256);
     auto viewport = Viewport(1, 1, 1);
 
-    auto spheres = std::vector<Sphere> {
-        {Colors::RED, {0, -1, 3}, 1},
-        {Colors::GREEN, {2, 0, 4}, 1},
-        {Colors::BLUE, {-2, 0, 4}, 1},
+    auto spheres = std::vector<Sphere>{
+        {Colors::RED,   {0,  -1, 3}, 1},
+        {Colors::GREEN, {2,  0,  4}, 1},
+        {Colors::BLUE,  {-2, 0,  4}, 1},
     };
 
     bool window_should_close = false;
@@ -71,8 +71,8 @@ std::optional<Color> get_color(const std::vector<Sphere>& spheres, const Vec3& r
     auto color = std::optional<Color>();
     auto closest_t = std::numeric_limits<double>::infinity();
 
-    for (auto& sphere : spheres)
-        for (auto& t : sphere.get_ray_intersection(ray))
+    for (auto& sphere: spheres)
+        for (auto& t: sphere.get_ray_intersection(ray))
             if (t < closest_t)
                 color.emplace(sphere.get_color());
 

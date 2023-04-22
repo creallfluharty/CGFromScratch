@@ -14,7 +14,9 @@ public:
     std::list<double> get_ray_intersection(Vec3 ray) const;
 
     [[nodiscard]] Color get_color() const;
+
     [[nodiscard]] Vec3 get_pos() const;
+
     [[nodiscard]] double get_radius() const;
 
 private:

@@ -9,7 +9,7 @@ std::list<double> Sphere::get_ray_intersection(Vec3 ray) const {
     auto b = 2 * this->position.dot(ray);
     auto c = this->position.dot(this->position) - this->radius * this->radius;
 
-    auto discriminate = b*b - 4*a*c;
+    auto discriminate = b * b - 4 * a * c;
 
     if (discriminate < 0)
         return {};
